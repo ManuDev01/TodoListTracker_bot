@@ -19,12 +19,14 @@ bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
 // Start the bot (using long polling)
 bot.start();
 console.log("Se ha iniciado el server");
-/*
-bot.on("message", async (ctx) => {
-    ctx.reply("Ha llegado un mensaje");
-});*/
 bot.hears("Hola", (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     var _a;
     const txt = (_a = ctx.message) === null || _a === void 0 ? void 0 : _a.text;
     console.log(txt);
 }));
+bot.command("todo", (ctx) => ctx.reply("Menu de lista de tareas"));
+bot.command("sleepcalc", (ctx) => {
+    ctx.reply("Calculadora de sueño");
+    let date = new Date();
+    ctx.reply("Hora actual: " + date.getHours() + date.getMinutes());
+});

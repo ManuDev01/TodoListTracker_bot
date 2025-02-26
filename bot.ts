@@ -19,3 +19,19 @@ bot.hears("Hola", async (ctx) => {
 
     console.log(txt);
 });
+
+bot.command("todo", (ctx) => ctx.reply("Menu de lista de tareas"));
+
+bot.command("sleepcalc", (ctx) => {
+    ctx.reply("Calculadora de sueño")
+    let date: Date = new Date();
+    const cicloSueno: Number = 90; //Tiempo optimo de ciclo de sueno
+    const cicloMinimo: Number = 4;
+    const cicloMedio: Number = 5;
+    const cicloRecomendado: Number = 6;
+
+    ctx.reply("Hora actual: " + ":" + date.getHours() + date.getMinutes());
+
+
+
+});
